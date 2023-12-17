@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const ListFilms = styled.ul`
+export const Lists = styled.ul`
   margin-top: 12px;
 `;
 export const ItemFilms = styled.li`
   font-weight: 400;
   font-size: 20px;
-  color: #424041;
+  color: #red;
 
   :not(:last-child) {
     margin-bottom: 6px;
@@ -14,8 +14,8 @@ export const ItemFilms = styled.li`
 
   a:hover,
   a:focus {
-    background-color: #f5edee;
-    color: #780a0f;
+    background-color: #red;
+    color: #red;
   }
 
   a {

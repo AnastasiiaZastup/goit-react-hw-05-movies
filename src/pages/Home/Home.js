@@ -1,7 +1,7 @@
+import React, { useEffect, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { getTrendingMovies } from 'components/api';
 import { List } from 'components/List/List';
-import { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
 import { Title } from './Home.styled';
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
     };
     fetchMovies();
   }, []);
+
   return (
     <div>
       <Title>Trending today</Title>

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-export const StyledList = styled.ul`
+export const StyledLists = styled.ul`
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 `;
-export const ListItem = styled.li`
+export const ListItems = styled.li`
   font-size: 14px;
   padding: 6px;
-  border: solid 1px #780a0f;
-  background-color: #f5edee;
+  border: solid 1px #red;
+  background-color: #red;
   border-radius: 15px;
 
   :not(:last-child) {
@@ -18,10 +18,10 @@ export const ListItem = styled.li`
   }
 
   span {
-    color: #780a0f;
+    color: #red;
   }
 `;
-export const ReviewsDescr = styled.p`
-  color: #424041;
+export const ReviewsDescription = styled.p`
+  color: #red;
   margin: 10px 0;
 `;

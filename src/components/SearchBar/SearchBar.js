@@ -4,8 +4,8 @@ import { Input, Button } from './SearchBar.styled';
 export const SearchBar = ({ setSearchParams }) => {
   const [query, setQuery] = useState('');
 
-  const updateQuery = e => {
-    e.preventDefault();
+  const updateQuery = event => {
+    event.preventDefault();
     setSearchParams({ query: query });
   };
 
@@ -19,7 +19,7 @@ export const SearchBar = ({ setSearchParams }) => {
         <Input
           value={query}
           type="text"
-          placeholder="Enter name of the movie"
+          placeholder="Enter name"
           autoFocus
           onChange={handleSearchParams}
         ></Input>

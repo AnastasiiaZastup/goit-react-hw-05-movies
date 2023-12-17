@@ -6,8 +6,8 @@ export const Input = styled.input`
   line-height: 27px;
   padding: 8px 8px;
 
-  color: #424041;
-  background: #f5edee;
+  color: #red;
+  background: #ffffff;
   border-radius: 10px;
   width: 400px;
 `;
@@ -19,7 +19,7 @@ export const Button = styled.button`
 
   margin-left: 12px;
   padding: 8px 8px;
-  color: #f5edee;
-  background: #424041;
+  color: #ffffff;
+  background: #red;
   border-radius: 10px;
 `;

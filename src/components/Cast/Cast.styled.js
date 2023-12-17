@@ -10,7 +10,8 @@ export const StyledList = styled.ul`
 export const StyledSecondaryText = styled.p`
   font-size: 20px;
 `;
-export const ListItem = styled.li`
+
+export const ListItems = styled.li`
   min-width: 182px;
   font-size: 14px;
   padding: 6px;
