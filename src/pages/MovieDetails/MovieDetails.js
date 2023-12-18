@@ -3,18 +3,6 @@ import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { Suspense } from 'react';
-import {
-  BackLink,
-  MovieWrapper,
-  MovieImg,
-  MovieTitle,
-  MovieSubTitle,
-  MovieDescr,
-  ListDescr,
-  StyledList,
-  ListItem,
-  Title,
-} from './MovieDetails.styled';
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -37,12 +25,10 @@ export default function MovieDetails() {
 
   return (
     <div>
-      <BackLink>
-        <Link to={backLink}>Go back!</Link>
-      </BackLink>
+      <Link to={backLink}>Go back!</Link>
       {movie && (
-        <MovieWrapper>
-          <MovieImg
+        <div>
+          <img
             src={`${
               movie.poster_path
                 ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path
@@ -52,36 +38,34 @@ export default function MovieDetails() {
             alt={movie.original_title}
           />
           <div>
-            <MovieTitle>{movie.original_title}</MovieTitle>
-            <MovieSubTitle>
-              User score: {Math.round(movie.vote_average) * 10}%
-            </MovieSubTitle>
-            <MovieSubTitle>Overview</MovieSubTitle>
-            <MovieDescr>{movie.overview}</MovieDescr>
-            <MovieSubTitle>Genres</MovieSubTitle>
-            <ListDescr>
+            <h2>{movie.original_title}</h2>
+            <h3>User score: {Math.round(movie.vote_average) * 10}%</h3>
+            <h3>Overview</h3>
+            <p>{movie.overview}</p>
+            <h3>Genres</h3>
+            <ul>
               {movie.genres?.map(genre => (
                 <li key={genre.id}>{genre.name}</li>
               ))}
-            </ListDescr>
+            </ul>
           </div>
-        </MovieWrapper>
+        </div>
       )}
 
       <div>
-        <Title>Additional information</Title>
-        <StyledList>
-          <ListItem>
+        <h3>Additional information</h3>
+        <ul>
+          <li>
             <Link to="cast" state={location.state}>
               Cast
             </Link>
-          </ListItem>
-          <ListItem>
+          </li>
+          <li>
             <Link to="reviews" state={location.state}>
               Reviews
             </Link>
-          </ListItem>
-        </StyledList>
+          </li>
+        </ul>
         <Suspense fallback={<div>Loading subpage...</div>}>
           <Outlet />
         </Suspense>

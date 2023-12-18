@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { List } from 'components/List/List';
 
-export default function Movie() {
+export default function MoviePage() {
   const [movies, setMovies] = useState([]);
   const [params, setParams] = useSearchParams();
 

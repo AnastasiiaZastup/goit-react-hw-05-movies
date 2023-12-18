@@ -2,7 +2,6 @@ import { getCastMovie } from '../api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import { StyledList, ListItems } from './Cast.styled';
 
 export default function Cast() {
   const [actors, setActors] = useState([]);
@@ -23,9 +22,9 @@ export default function Cast() {
 
   return (
     <div>
-      <StyledList>
+      <ul>
         {actors.map(({ id, profile_path, original_name, character }) => (
-          <ListItems key={id}>
+          <li key={id}>
             <img
               src={`${
                 profile_path
@@ -40,9 +39,9 @@ export default function Cast() {
             <p>
               <span>Character:</span> {character}
             </p>
-          </ListItems>
+          </li>
         ))}
-      </StyledList>
+      </ul>
       <Toaster />
     </div>
   );

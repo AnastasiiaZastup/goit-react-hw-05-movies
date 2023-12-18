@@ -3,8 +3,8 @@ import { Layout } from './Layout/Layout';
 import { GlobalStyle } from './GlobalStyled';
 import { lazy } from 'react';
 
-const HomePage = lazy(() => import('../pages/Home/Home'));
-const MoviePage = lazy(() => import('../pages/Movie/Movie'));
+const HomePage = lazy(() => import('../pages/Home/HomePage'));
+const MoviePage = lazy(() => import('../pages/Movie/MoviePage'));
 const MovieDetailsPage = lazy(() =>
   import('../pages/MovieDetails/MovieDetails')
 );

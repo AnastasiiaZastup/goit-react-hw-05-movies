@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { getTrendingMovies } from 'components/api';
 import { List } from 'components/List/List';
-import { Title } from './Home.styled';
 
-export default function Home() {
+export default function HomePage() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -21,7 +20,7 @@ export default function Home() {
 
   return (
     <div>
-      <Title>Trending today</Title>
+      <h2>Trending today</h2>
       <List movies={movies} />
       <Toaster />
     </div>
