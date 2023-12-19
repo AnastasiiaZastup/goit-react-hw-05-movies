@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { Suspense } from 'react';
+import { DivMov } from './MovieDetails.styled';
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -27,7 +28,7 @@ export default function MovieDetails() {
     <div>
       <Link to={backLink}>Go back!</Link>
       {movie && (
-        <div>
+        <DivMov>
           <img
             src={`${
               movie.poster_path
@@ -49,7 +50,7 @@ export default function MovieDetails() {
               ))}
             </ul>
           </div>
-        </div>
+        </DivMov>
       )}
 
       <div>
